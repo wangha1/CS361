@@ -1,0 +1,7 @@
+#This file would test if the program sort string nicely without any optional argument
+import kwic
+
+document1 = "Hello there.\nHello there, buddy.\nHello and goodbye, buddy.\nHello is like buddy Goodbye!";
+document2 = ". A B\n. A B C\n. A B C D";
+assert(kwic.kwic(document1) == [(['and', 'goodbye,', 'buddy.', 'Hello'], 2), (['buddy', 'Goodbye!', 'Hello', 'is', 'like'], 3), (['buddy.', 'Hello', 'and', 'goodbye,'], 2), (['buddy.', 'Hello', 'there,'], 1), (['Goodbye!', 'Hello', 'is', 'like', 'buddy'], 3), (['goodbye,', 'buddy.', 'Hello', 'and'], 2), (['Hello', 'and', 'goodbye,', 'buddy.'], 2), (['Hello', 'is', 'like', 'buddy', 'Goodbye!'], 3), (['Hello', 'there,', 'buddy.'], 1), (['Hello', 'there.'], 0), (['is', 'like', 'buddy', 'Goodbye!', 'Hello'], 3), (['like', 'buddy', 'Goodbye!', 'Hello', 'is'], 3), (['there,', 'buddy.', 'Hello'], 1), (['there.', 'Hello'], 0)])
+assert(kwic.kwic(document2) == [(['.', 'A', 'B'], 0), (['.', 'A', 'B', 'C'], 1), (['.', 'A', 'B', 'C', 'D'], 2), (['A', 'B', '.'], 0), (['A', 'B', 'C', '.'], 1), (['A', 'B', 'C', 'D', '.'], 2), (['B', '.', 'A'], 0), (['B', 'C', '.', 'A'], 1), (['B', 'C', 'D', '.', 'A'], 2), (['C', '.', 'A', 'B'], 1), (['C', 'D', '.', 'A', 'B'], 2), (['D', '.', 'A', 'B', 'C'], 2)])

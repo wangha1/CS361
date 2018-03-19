@@ -1,0 +1,22 @@
+begin: start
+
+state: start
+callConstructor -> ready
+
+state: ready
+callAddText -> ready
+callIndex -> printIndex
+callListPairs -> printListPairs
+callReset -> ready
+
+state: printIndex
+callReset -> ready
+callAddText -> ready
+callIndex -> printIndex
+callListPairs -> printListPairs
+
+state: printListPairs
+callReset -> ready
+callAddText -> ready
+callIndex -> printIndex
+callListPairs -> printListPairs
